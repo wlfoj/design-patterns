@@ -29,5 +29,20 @@ public class Main {
 		System.out.println(service.getVideo("final champions"));
 		System.out.println(service.getVideo("final champions"));
 	}
+	
+	public static void comVisitor() {
+		
+	}
+	
+	public static void semVisitor() {
+		
+	}
+	
+	public static void comStrategy() {
+		
+	}
 
+	public static void semStrategy() {
+		
+	}
 }
