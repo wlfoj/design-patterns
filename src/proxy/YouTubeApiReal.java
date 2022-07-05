@@ -19,9 +19,9 @@ public class YouTubeApiReal implements IYouTube {
     
     @Override
     public String getVideo(String videoId) {
-    	System.out.println("");
     	System.out.println("--Entrei no real service--");
     	System.out.println("--Demorei 5 horas :( --");
+    	System.out.println("");
 		return this.bancoDados.get(videoId);
     }
     

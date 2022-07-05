@@ -11,8 +11,12 @@ public class Main {
 //https://www.devmedia.com.br/conheca-o-pattern-proxy-gof-gang-of-four/4066
 	public static void main(String[] args) throws IOException, InterruptedException {
 
-		semProxy();
-		//comProxy();
+		//semProxy();
+		comProxy();
+		//comVisitor();
+		//semVisitor();
+		//comStrategy();
+		//semStrategy();
 	}
 	
 	
