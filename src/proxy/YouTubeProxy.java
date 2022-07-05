@@ -6,7 +6,7 @@ import java.util.HashMap;
  * 
  */
 public class YouTubeProxy implements IYouTube {
-	IYouTube service;// Referência ao objeto real
+	private IYouTube service;// Referência ao objeto real
 	private HashMap<String, String> cache = new HashMap<String, String>();
 	 
 	public YouTubeProxy() {
