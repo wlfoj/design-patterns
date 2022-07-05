@@ -1,4 +1,4 @@
-package strategy.CalculadoraDeImpostoSemPadrao;
+package strategy;
 
 //Calculadora de imposto sem o padrao
 public class CalculadoraDeImpostosSemPadrao {

@@ -1,8 +1,8 @@
-package strategy.CalculadoraDeImpostoStrategy;
+package strategy;
 
 //Implementaçao da calculadora com padrão
 public class CalculadoraDeImpostoStrategy {
-	  public double calcular(ImpostoStrategy imposto) { 
+	  public double calcularStrategy(ImpostoStrategy imposto) { 
 		    return imposto.calcularStrategy(); 
 		  } 
 }

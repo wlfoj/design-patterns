@@ -1,4 +1,4 @@
-package strategy.CalculadoraDeImpostoStrategy;
+package strategy;
 
 //classe IPI calculo
 public class IpiStrategy implements ImpostoStrategy {

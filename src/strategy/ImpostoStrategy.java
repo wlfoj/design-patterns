@@ -1,4 +1,4 @@
-package strategy.CalculadoraDeImpostoStrategy;
+package strategy;
 
 //interface com o metodo de calcular 
 public interface ImpostoStrategy {

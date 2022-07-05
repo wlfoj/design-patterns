@@ -1,4 +1,4 @@
-package strategy.CalculadoraDeImpostoStrategy;
+package strategy;
 
 //classe icms calculo
 public class IcmsStrategy implements ImpostoStrategy {
