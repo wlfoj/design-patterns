@@ -50,14 +50,14 @@ public class Main {
 		CalculadoraDeImpostoStrategy calculadora = new CalculadoraDeImpostoStrategy(); 
 	    IcmsStrategy icms = new IcmsStrategy(100.0); 
 	    IpiStrategy ipi = new IpiStrategy(100.0); 
-	    System.out.println("ICMS com padrão => " + calculadora.calcularStrategy(icms)); 
+	    System.out.println("\nICMS com padrão => " + calculadora.calcularStrategy(icms)); 
 	    System.out.println("IPI com padrão => " + calculadora.calcularStrategy(ipi)); 
 		
 	}
 
 	public static void semStrategy() {
 		CalculadoraDeImpostosSemPadrao calculadora = new CalculadoraDeImpostosSemPadrao();
-		System.out.println("ICMS sem padrão => " + calculadora.calcular("ICMS", 100));
+		System.out.println("\nICMS sem padrão => " + calculadora.calcular("ICMS", 100));
 		System.out.println("IPI sem padrão => " + calculadora.calcular("IPI", 100));
 	}
 }
