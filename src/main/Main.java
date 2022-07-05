@@ -10,6 +10,9 @@ import strategy.CalculadoraDeImpostoStrategy;
 import strategy.CalculadoraDeImpostosSemPadrao;
 import strategy.IcmsStrategy;
 import strategy.IpiStrategy;
+import visitor.AcessoriosComVisitor;
+import visitor.CarroComVisitor;
+import visitor.VeiculoVisitor;
 
 public class Main {
 //https://www.devmedia.com.br/conheca-o-pattern-proxy-gof-gang-of-four/4066
@@ -17,8 +20,8 @@ public class Main {
 
 		//semProxy();
 		comProxy();
-		//comVisitor();
-		//semVisitor();
+		comVisitor();
+		semVisitor();
 		comStrategy();
 		semStrategy();
 	}
@@ -39,11 +42,20 @@ public class Main {
 	}
 	
 	public static void comVisitor() {
-		
+		CarroComVisitor carro = new CarroComVisitor("Fiat", "Toro");
+        VeiculoVisitor visitor = new VeiculoVisitor();
+        
+        AcessoriosComVisitor acessorios = new AcessoriosComVisitor("Black", "Pionner");
+        
+        System.out.println("\n"+visitor.exibirCarro(carro)+"\n"+visitor.exibirAcessorios(acessorios));
 	}
 	
 	public static void semVisitor() {
-
+		CarroComVisitor carro = new CarroComVisitor("Fiat", "Toro");
+	      
+        AcessoriosComVisitor acessorios = new AcessoriosComVisitor("Black", "Pionner");
+        
+        System.out.println(carro.toString()+"\n"+acessorios.toString());
 	}
 	
 	public static void comStrategy() {

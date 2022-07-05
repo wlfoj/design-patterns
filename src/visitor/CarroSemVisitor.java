@@ -1,11 +1,11 @@
-package visitor.carrosSemVisitor;
+package visitor;
 
-public class Carro {
+public class CarroSemVisitor {
 
     private String marca;
     private String nome;
 
-    public Carro(String marca, String nome){
+    public CarroSemVisitor(String marca, String nome){
         this.marca = marca;
         this.nome = nome;
     }

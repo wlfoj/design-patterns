@@ -1,11 +1,11 @@
-package visitor.carrosSemVisitor;
+package visitor;
 
-public class Acessorios{
+public class AcessoriosSemVisitor{
 
     private String roda;
     private String multimidia;
 
-    public Acessorios(String roda,String multimidia){
+    public AcessoriosSemVisitor(String roda,String multimidia){
         this.roda = roda;
         this.multimidia = multimidia;
     }

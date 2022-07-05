@@ -1,15 +1,15 @@
-package visitor.carrosComVisitor;
+package visitor;
 
 //Cada classe concreta de elemento deve implementar o método
 //`aceitar` de tal maneira que ele chama o método visitante que
 //corresponde com a classe do elemento.
 
-public class Carro implements Veiculo{
+public class CarroComVisitor implements VeiculoComVisitor{
 
     private String marca;
     private String nome;
 
-    public Carro(String marca, String nome){
+    public CarroComVisitor(String marca, String nome){
         this.marca = marca;
         this.nome = nome;
     }

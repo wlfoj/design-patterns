@@ -1,4 +1,4 @@
-package visitor.carrosComVisitor;
+package visitor;
 
 //A interface visitante declara um conjunto de métodos
 //visitantes que correspondem com as classes elemento. A
@@ -7,6 +7,6 @@ package visitor.carrosComVisitor;
 //lidando.
 
 public interface Visitor {
-    String exibirCarro(Carro carro);
-    String exibirAcessorios(Acessorios acessorios);
+    String exibirCarro(CarroComVisitor carro);
+    String exibirAcessorios(AcessoriosComVisitor acessorios);
 }
