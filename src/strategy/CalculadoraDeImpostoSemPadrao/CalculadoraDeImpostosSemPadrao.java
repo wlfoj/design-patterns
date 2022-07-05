@@ -1,7 +1,7 @@
-package strategy.CalculadoraDeImposto;
+package strategy.CalculadoraDeImpostoSemPadrao;
 
 //Calculadora de imposto sem o padrao
-public class CalculadoraDeImpostos {
+public class CalculadoraDeImpostosSemPadrao {
 		  
 		  public double calcular(String imposto, double valor) { 
 		    if (imposto.equals("ICMS")) 
