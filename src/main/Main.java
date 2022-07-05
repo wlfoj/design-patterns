@@ -11,7 +11,9 @@ import strategy.CalculadoraDeImpostosSemPadrao;
 import strategy.IcmsStrategy;
 import strategy.IpiStrategy;
 import visitor.AcessoriosComVisitor;
+import visitor.AcessoriosSemVisitor;
 import visitor.CarroComVisitor;
+import visitor.CarroSemVisitor;
 import visitor.VeiculoVisitor;
 
 public class Main {
@@ -51,11 +53,11 @@ public class Main {
 	}
 	
 	public static void semVisitor() {
-		CarroComVisitor carro = new CarroComVisitor("Fiat", "Toro");
+		CarroSemVisitor carro = new CarroSemVisitor("Fiat", "Toro");
 	      
-        AcessoriosComVisitor acessorios = new AcessoriosComVisitor("Black", "Pionner");
+        AcessoriosSemVisitor acessorios = new AcessoriosSemVisitor("Black", "Pionner");
         
-        System.out.println(carro.toString()+"\n"+acessorios.toString());
+        System.out.println("\n"+carro+"\n"+acessorios);
 	}
 	
 	public static void comStrategy() {
