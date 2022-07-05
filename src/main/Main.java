@@ -20,12 +20,7 @@ public class Main {
 //https://www.devmedia.com.br/conheca-o-pattern-proxy-gof-gang-of-four/4066
 	public static void main(String[] args) throws IOException, InterruptedException {
 
-		//semProxy();
-		comProxy();
-		comVisitor();
-		semVisitor();
-		comStrategy();
-		semStrategy();
+	
 	}
 	
 	
@@ -43,22 +38,6 @@ public class Main {
 		System.out.println(service.getVideo("final champions"));
 	}
 	
-	public static void comVisitor() {
-		CarroComVisitor carro = new CarroComVisitor("Fiat", "Toro");
-        VeiculoVisitor visitor = new VeiculoVisitor();
-        
-        AcessoriosComVisitor acessorios = new AcessoriosComVisitor("Black", "Pionner");
-        
-        System.out.println("\n"+visitor.exibirCarro(carro)+"\n"+visitor.exibirAcessorios(acessorios));
-	}
-	
-	public static void semVisitor() {
-		CarroSemVisitor carro = new CarroSemVisitor("Fiat", "Toro");
-	      
-        AcessoriosSemVisitor acessorios = new AcessoriosSemVisitor("Black", "Pionner");
-        
-        System.out.println("\n"+carro+"\n"+acessorios);
-	}
 	
 	public static void comStrategy() {
 		CalculadoraDeImpostoStrategy calculadora = new CalculadoraDeImpostoStrategy(); 
