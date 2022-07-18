@@ -6,16 +6,13 @@ import java.util.HashMap;
  * 
  */
 public class YouTubeProxy implements IYouTube {
+	
 	private IYouTube service;// Referência ao objeto real
 	private HashMap<String, String> cache = new HashMap<String, String>();
 	 
 	public YouTubeProxy() {
 		// Colocando a referência
 		this.service = new YouTubeApiReal();
-		
-		this.cache.put("rock lee x gaara - link park", "tururuduuuu du");
-		this.cache.put("som max bagulho sinistro", "be running no problemmmm so if i cooll");
-		
 	}
 	
 	
@@ -23,7 +20,6 @@ public class YouTubeProxy implements IYouTube {
 	public String getVideo(String videoId) {
 		//
 		String inCache = cache.get(videoId);
-		
 		// Se não houver cache para essa request
 		if (inCache == null) {
 			// Chama o real Service e salva em cache

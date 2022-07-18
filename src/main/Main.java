@@ -1,8 +1,10 @@
 package main;
 
 import java.io.IOException;
-import java.util.HashMap;
 
+import observer.AuntListener;
+import observer.GrandmaListener;
+import observer.PublishManager;
 import proxy.IYouTube;
 import proxy.YouTubeApiReal;
 import proxy.YouTubeProxy;
@@ -17,27 +19,44 @@ import visitor.CarroSemVisitor;
 import visitor.VeiculoVisitor;
 
 public class Main {
-//https://www.devmedia.com.br/conheca-o-pattern-proxy-gof-gang-of-four/4066
 	public static void main(String[] args) throws IOException, InterruptedException {
+<<<<<<< Updated upstream
 		
 		comVisitor();
 		semVisitor();
 	
+=======
+		//semProxy();
+		//comProxy();
+		//semVisitor();
+		//comVisitor();
+		//semStrategy();
+		//comStrategy();
+		comObserver();
+>>>>>>> Stashed changes
 	}
 	
 	
 	public static void semProxy() {
 		IYouTube service = new YouTubeApiReal();
 		System.out.println(service.getVideo("final champions"));
+		System.out.println("");
 		System.out.println(service.getVideo("final champions"));
+		System.out.println("");
 		System.out.println(service.getVideo("final champions"));
 	}
 	
 	public static void comProxy() {
 		IYouTube service = new YouTubeProxy();
 		System.out.println(service.getVideo("final champions"));
+		System.out.println("");
 		System.out.println(service.getVideo("final champions"));
+		System.out.println("");
 		System.out.println(service.getVideo("final champions"));
+		System.out.println("");
+		System.out.println(service.getVideo("rock lee x gaara - link park"));
+		System.out.println("");
+		System.out.println(service.getVideo("rock lee x gaara - link park"));
 	}
 
 	public static void semVisitor() {
@@ -70,5 +89,29 @@ public class Main {
 		CalculadoraDeImpostosSemPadrao calculadora = new CalculadoraDeImpostosSemPadrao();
 		System.out.println("\nICMS sem padrÃ£o => " + calculadora.calcular("ICMS", 100));
 		System.out.println("IPI sem padrÃ£o => " + calculadora.calcular("IPI", 100));
+	}
+	
+	public static void comObserver() {
+		AuntListener tia = new AuntListener();
+		GrandmaListener avo = new GrandmaListener();
+		
+		PublishManager pub = new PublishManager("nascimentos", "aniversarios", "festas");
+		
+		//vovó e titia querem saber quem anda nascendo
+		pub.subscribe("nascimentos", avo);
+		pub.subscribe("nascimentos", tia);
+		//só titia quer saber das festas
+		pub.subscribe("festas", tia);
+		
+		pub.notify("nascimentos", "O bb de joana nasceu");
+		System.out.println();
+		pub.notify("festas", "amanha tem festa na Manu");
+		System.out.println();
+		pub.notify("nascimentos", "O filho de carlos nasceu");
+		System.out.println();
+		//titia não quer mais saber quem nasceu
+		pub.unsubscribe("nascimentos", tia);
+		
+		pub.notify("nascimentos", "tem gemeos vindo aí");
 	}
 }
