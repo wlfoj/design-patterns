@@ -8,6 +8,7 @@ import observer.PublishManager;
 import proxy.IYouTube;
 import proxy.YouTubeApiReal;
 import proxy.YouTubeProxy;
+import singleton.HighlanderSingleton;
 import strategy.CalculadoraDeImpostoStrategy;
 import strategy.CalculadoraDeImpostosSemPadrao;
 import strategy.IcmsStrategy;
@@ -20,23 +21,23 @@ import visitor.VeiculoVisitor;
 
 public class Main {
 	public static void main(String[] args) throws IOException, InterruptedException {
-<<<<<<< Updated upstream
-		
-		comVisitor();
-		semVisitor();
-	
-=======
 		//semProxy();
 		//comProxy();
 		//semVisitor();
 		//comVisitor();
 		//semStrategy();
 		//comStrategy();
-		comObserver();
->>>>>>> Stashed changes
+		//comObserver();
+		comSingleton();
 	}
 	
-	
+	public static void comSingleton(){
+		// SÃ³ pode haver um High Lander
+		HighlanderSingleton highL1 = HighlanderSingleton.getInstance("Josimar");
+		HighlanderSingleton highL2 = HighlanderSingleton.getInstance("Emanuel");
+		System.out.println("O nome de HighLander 1 "+ highL1.getNome());
+		System.out.println("O nome de HighLander 2 "+ highL2.getNome());
+	}
 	public static void semProxy() {
 		IYouTube service = new YouTubeApiReal();
 		System.out.println(service.getVideo("final champions"));
@@ -97,10 +98,10 @@ public class Main {
 		
 		PublishManager pub = new PublishManager("nascimentos", "aniversarios", "festas");
 		
-		//vovó e titia querem saber quem anda nascendo
+		//vovï¿½ e titia querem saber quem anda nascendo
 		pub.subscribe("nascimentos", avo);
 		pub.subscribe("nascimentos", tia);
-		//só titia quer saber das festas
+		//sï¿½ titia quer saber das festas
 		pub.subscribe("festas", tia);
 		
 		pub.notify("nascimentos", "O bb de joana nasceu");
@@ -109,9 +110,9 @@ public class Main {
 		System.out.println();
 		pub.notify("nascimentos", "O filho de carlos nasceu");
 		System.out.println();
-		//titia não quer mais saber quem nasceu
+		//titia nï¿½o quer mais saber quem nasceu
 		pub.unsubscribe("nascimentos", tia);
 		
-		pub.notify("nascimentos", "tem gemeos vindo aí");
+		pub.notify("nascimentos", "tem gemeos vindo aï¿½");
 	}
 }
