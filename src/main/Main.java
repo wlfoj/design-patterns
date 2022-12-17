@@ -6,6 +6,9 @@ import adapter.AdapterCar;
 import adapter.CarEV;
 import adapter.CarICE;
 import adapter.ICar;
+import factoryMethod.FactoryVehicle;
+import factoryMethod.TypeVehicle;
+import factoryMethod.VehicleProd;
 import observer.AuntListener;
 import observer.GrandmaListener;
 import observer.PublishManager;
@@ -130,5 +133,15 @@ public class Main {
 		car2.abastecer();
 		System.out.println("RECARREGANDO CARRO - EV");
 		car1.abastecer();
+	}
+
+	public static void comFactoryMethod() {
+		FactoryVehicle factoryVehicle = new FactoryVehicle();
+		VehicleProd vehicle1 = factoryVehicle.getVehicle('A', "34BR", TypeVehicle.CAR);
+		VehicleProd vehicle2 = factoryVehicle.getVehicle('B', "77BR", TypeVehicle.TRUCK);
+		vehicle1.rodar(10);
+		vehicle2.rodar(14);
+		System.out.println("Para o carro: -> "+ vehicle1.detail());
+		System.out.println("Para o caminhão: -> "+ vehicle2.detail());
 	}
 }

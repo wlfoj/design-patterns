@@ -3,6 +3,7 @@
 - [ ] Decorator
 - [ ] Builder
 - [ ] Abstract Factory
+- [x] Factory Method
 - [x] Adapter
 - [x] Singleton
 - [x] Observer
