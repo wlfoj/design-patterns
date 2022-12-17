@@ -2,6 +2,10 @@ package main;
 
 import java.io.IOException;
 
+import adapter.AdapterCar;
+import adapter.CarEV;
+import adapter.CarICE;
+import adapter.ICar;
 import observer.AuntListener;
 import observer.GrandmaListener;
 import observer.PublishManager;
@@ -28,7 +32,8 @@ public class Main {
 		//semStrategy();
 		//comStrategy();
 		//comObserver();
-		comSingleton();
+		//comSingleton();
+		comAdapter();
 	}
 	
 	public static void comSingleton(){
@@ -114,5 +119,16 @@ public class Main {
 		pub.unsubscribe("nascimentos", tia);
 		
 		pub.notify("nascimentos", "tem gemeos vindo a�");
+	}
+
+	public static void comAdapter(){
+		// Na situação, o cliente possui robôs que recebem comandos
+		// O cliente só sabe dar comando para abastecer carro ICE
+		ICar car1 = new AdapterCar(new CarEV());// Tratando carro EV como se fosse ICE
+		ICar car2 = new CarICE();
+		System.out.println("ABASTECENDO CARRO - COMBUSTÃO");
+		car2.abastecer();
+		System.out.println("RECARREGANDO CARRO - EV");
+		car1.abastecer();
 	}
 }

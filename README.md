@@ -1,0 +1,11 @@
+## Padrões
+- [ ] Facade
+- [ ] Decorator
+- [ ] Builder
+- [ ] Abstract Factory
+- [x] Adapter
+- [x] Singleton
+- [x] Observer
+- [x] Proxy
+- [x] Strategy
+- [x] Visitor
