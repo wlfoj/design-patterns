@@ -1,4 +1,5 @@
 ## Padrões
+- [ ] Wrapper
 - [ ] Facade
 - [ ] Decorator
 - [ ] Builder
